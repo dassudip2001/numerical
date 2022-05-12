@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+float f(float,float);
+void main()
+{
+   float x,y,h,n,xf;
+   int i;
+   clrscr();
+   printf("Enter the value of x:");
+   scanf("%f",&x);
+   printf("Enter the value of y:");
+   scanf("%f",&y);
+   printf("Enter the value of h:");
+   scanf("%f",&h);
+   printf("Enter the value of x which to be find:");
+   scanf("%f",&xf);
+   n=(xf-x)/h;
+   for(i=1;i<=(int)n;i++)
+   {
+     y=y+(h*f(x,y));
+     x=x+h;
+   }
+   printf("Result is:%f",y);
+   getch();
+}
+
+
+float f(float x,float y)
+{
+  float a;
+  //a=((x*x)+y);
+  //a=(1+(x*y));
+  //a=(pow(x,3)+y);
+  //a=(pow(x,2)+pow(y,2));
+  a=(x*y);
+  return(a);
+}

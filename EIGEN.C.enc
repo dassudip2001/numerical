@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+  float m[40][40],x[40],e[40],zmax,emax,z[40];
+  int i,j,n;
+  clrscr();
+  printf("Enter size of matrix=");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+     printf("Enter the value of %d row",i);
+     for(j=1;j<=n;j++)
+     {
+	printf("\nEnter the value of column%d=",j);
+	scanf("%f",&m[i][j]);
+     }
+  }
+  printf("Enter the column vector\n");
+  for(i=1;i<=n;i++)
+  {
+    scanf("%f",&x[i]);
+  }
+  do{
+      for(i=1;i<=n;i++)
+      {
+	z[i]=0;
+	for(j=1;j<=n;j++)
+	{
+	  z[i]=z[i]+m[i][j]*x[i];
+	}
+      }
+     zmax=fabs(z[1]);
+     for(i=2;i<=n;i++)
+     {
+       if((fabs(z[i]))>zmax)
+       zmax=fabs(z[i]);
+     }
+   for(i=1;i<=n;i++)
+    {
+      z[i]=z[i]/zmax;
+    }
+   for(i=1;i<=n;i++)
+    {
+      e[i]=0;
+      e[i]=fabs((fabs(z[i]))-(fabs(x[i])));
+    }
+    emax=e[1];
+    for(i=2;i<=n;i++)
+    {
+      if(e[i]>emax)
+      emax=e[i];
+    }
+    for(i=1;i<=n;i++)
+    {
+      x[i]=z[i];
+    }
+   }while(emax>0.0001);
+  printf("\n The equired eigen value is %f",zmax);
+  printf("\n The required eigen vector is \n");
+  for(i=1;i<=n;i++)
+   {
+     printf("%f\t",z[i]);
+   }
+  getch();
+}
