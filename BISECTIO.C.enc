@@ -1,11 +1,11 @@
 #include<stdio.h>
-#include<conio.h>
+//#include<conio.h>
 #include<math.h>
 float fun(float);
 void main()
 {
    float a,b,eps,mid;
-   clrscr();
+   //clrscr();
    printf("Enter value of a=");
    scanf("%f",&a);
    printf("Enter value of b=");
@@ -22,7 +22,7 @@ void main()
        mid=(a+b)/2;
    }
  printf("Integrated value=%f",mid);
- getch();
+ //getch();
 }
 
 

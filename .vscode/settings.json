@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "NEWTONF.C": "cpp"
+    "NEWTONF.C": "cpp",
+    "TRAP.C": "cpp"
   }
 }
