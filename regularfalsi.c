@@ -28,7 +28,8 @@ void main()
 float f(float x)
 {
     float y;
-    y = (pow(x, 3) + 7 * pow(x, 2) + 9);
+    // y = (pow(x, 3) + 7 * pow(x, 2) + 9);
+    y = (x * x * x - 5 * x + 1);
     // y=(pow(x,3)+2*x-2);
     return (y);
 }

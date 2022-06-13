@@ -28,7 +28,7 @@ void main()
 float fun(float x)
 {
     float y;
-    y = (pow(x, 3) - 4 * x + 1);
+    y = ((x * x * x) - 4 * x + 1);
     // y=(pow(x,3)-2*x-3);
     return (y);
 }
